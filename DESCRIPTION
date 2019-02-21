@@ -17,4 +17,5 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Imports: 
     tibble,
-    dplyr
+    dplyr,
+    magrittr
