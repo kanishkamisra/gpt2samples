@@ -1,0 +1,20 @@
+Package: gpt2samples
+Title: Samples of Generated Text from Open AI GPT-2
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Kanishka",
+           family = "Misra",
+           role = c("aut", "cre"),
+           email = "kmisra@purdue.edu")
+Description: R Package for using Samples of generated texts from Open AI's new GPT-2 language model.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 2.10)
+Suggests: 
+    testthat
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
+Imports: 
+    tibble,
+    dplyr
