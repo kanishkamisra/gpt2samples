@@ -53,17 +53,40 @@ library(gpt2samples)
 conditional %>%
   filter(id == 100)
 #> # A tibble: 2 x 4
-#>   file         id text                                             type    
-#>   <chr>     <int> <chr>                                            <chr>   
-#> 1 conditio…   100 "\n the waterbody that you are managing, gettin… sample  
-#> 2 conditio…   100 "\n Permit, WDFW ensures that nonconventional c… complet…
+#>   file         id type     text                                            
+#>   <chr>     <int> <chr>    <chr>                                           
+#> 1 conditio…   100 sample   the waterbody that you are managing, getting pr…
+#> 2 conditio…   100 complet… Permit, WDFW ensures that nonconventional child…
 
 unconditional_t07 %>%
   filter(id == 250)
-#> # A tibble: 1 x 3
-#>   file              id text                                                
-#>   <chr>          <int> <chr>                                               
-#> 1 unconditional…   250 "\nThis question already has an answer here: How do…
+#> # A tibble: 213 x 3
+#>    file              id text                                               
+#>    <chr>          <int> <chr>                                              
+#>  1 unconditional…   250 This question already has an answer here: How do I…
+#>  2 unconditional…   250 ""                                                 
+#>  3 unconditional…   250 This is a basic question regarding text editing. T…
+#>  4 unconditional…   250 ""                                                 
+#>  5 unconditional…   250 (A)                                                
+#>  6 unconditional…   250 ""                                                 
+#>  7 unconditional…   250 (B)                                                
+#>  8 unconditional…   250 ""                                                 
+#>  9 unconditional…   250 (A)                                                
+#> 10 unconditional…   250 ""                                                 
+#> # … with 203 more rows
+
+all_samples() %>%
+  filter(file == "conditional") %>%
+  tail()
+#> # A tibble: 6 x 4
+#>   file         id type     text                                            
+#>   <chr>     <int> <chr>    <chr>                                           
+#> 1 conditio…   500 complet… "BOP will be remembered for it's technically in…
+#> 2 conditio…   500 complet… ""                                              
+#> 3 conditio…   500 complet… There were literal lap times in running the wat…
+#> 4 conditio…   500 complet… ""                                              
+#> 5 conditio…   500 complet… ""                                              
+#> 6 conditio…   500 complet… I was voiced by legendary actor turns down play…
 
 all_samples() %>%
   group_by(file) %>%
@@ -71,12 +94,12 @@ all_samples() %>%
 #> # A tibble: 6 x 2
 #>   file                 total_lines
 #>   <chr>                      <int>
-#> 1 conditional                 1000
-#> 2 conditional-t07             1000
-#> 3 conditional-topk40          1000
-#> 4 unconditional                500
-#> 5 unconditional-t07            500
-#> 6 unconditional-topk40         500
+#> 1 conditional                18067
+#> 2 conditional-t07            24081
+#> 3 conditional-topk40         20405
+#> 4 unconditional              19469
+#> 5 unconditional-t07          28841
+#> 6 unconditional-topk40       21188
 ```
 
 Additional exploration can use Julia Silge and David Robinson’s

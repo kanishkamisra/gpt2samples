@@ -4,7 +4,7 @@
 \name{unconditional_t07}
 \alias{unconditional_t07}
 \title{Unconditional samples with temperature 0.7}
-\format{A data frame with 500 rows and 3 variables:
+\format{A tidy data frame with 28841 rows and 3 variables:
 \describe{
 \item{\code{file}}{character file identifier}
 \item{\code{id}}{integer sample id number as referenced in the openai gpt2 sample file}

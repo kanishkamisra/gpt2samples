@@ -62,6 +62,10 @@ unconditional_t07 %>%
   filter(id == 250)
 
 all_samples() %>%
+  filter(file == "conditional") %>%
+  tail()
+
+all_samples() %>%
   group_by(file) %>%
   summarise(total_lines = n())
 ```

@@ -4,7 +4,7 @@
 \name{unconditional}
 \alias{unconditional}
 \title{Unconditional with default settings}
-\format{A data frame with 500 rows and 3 variables:
+\format{A data frame with 19468 rows and 3 variables:
 \describe{
 \item{\code{file}}{character file identifier}
 \item{\code{id}}{integer sample id number as referenced in the openai gpt2 sample file}

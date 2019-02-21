@@ -4,12 +4,12 @@
 \name{conditional}
 \alias{conditional}
 \title{Conditional with default settings}
-\format{A data frame with 1000 rows and 4 variables:
+\format{A tidy data frame with 18067 rows and 4 variables:
 \describe{
 \item{\code{file}}{character - file identifier}
 \item{\code{id}}{integer - sample and completion number as referenced in the openai gpt2 sample file}
-\item{\code{text}}{character - the text, either a sample context or a completion}
 \item{\code{type}}{character - indicator of whether the text is a sample context or a completion}
+\item{\code{text}}{character - the text, either a sample context or a completion}
 }}
 \source{
 \url{https://github.com/openai/gpt-2/tree/master/gpt-2-samples}

@@ -4,7 +4,7 @@
 \name{unconditional_topk40}
 \alias{unconditional_topk40}
 \title{Unconditional with truncation 1 with top_40 k}
-\format{A data frame with 500 rows and 3 variables:
+\format{A data frame with 21188 rows and 3 variables:
 \describe{
 \item{\code{file}}{character file identifier}
 \item{\code{id}}{integer sample id number as referenced in the openai gpt2 sample file}

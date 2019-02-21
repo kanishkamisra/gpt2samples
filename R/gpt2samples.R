@@ -10,43 +10,43 @@ NULL
 
 #' @title Conditional with temperature 0.7
 #' @description Conditionally generated texts with contexts from WebText's test set
-#' @format A data frame with 1000 rows and 4 variables:
+#' @format A tidy data frame with 24081 rows and 4 variables:
 #' \describe{
 #'   \item{\code{file}}{character - file reference}
 #'   \item{\code{id}}{integer - sample and completion id number as referenced in the openai gpt2 sample file}
-#'   \item{\code{text}}{character - the text, either a sample context or a completion}
 #'   \item{\code{type}}{character - indicator of whether the text is a sample context or a completion}
+#'   \item{\code{text}}{character - the text, either a sample context or a completion}
 #'}
 #' @source \url{https://github.com/openai/gpt-2/tree/master/gpt-2-samples}
 "conditional_t07"
 
 #' @title Conditional with truncation 1 with top_40 k
 #' @description Conditionally generated texts with contexts from WebText's test set
-#' @format A data frame with 1000 rows and 4 variables:
+#' @format A tidy data frame with 20405 rows and 4 variables:
 #' \describe{
 #'   \item{\code{file}}{character - file reference}
 #'   \item{\code{id}}{integer - sample and completion id number as referenced in the openai gpt2 sample file}
-#'   \item{\code{text}}{character - the text, either a sample context or a completion}
 #'   \item{\code{type}}{character - indicator of whether the text is a sample context or a completion}
+#'   \item{\code{text}}{character - the text, either a sample context or a completion}
 #'}
 #' @source \url{https://github.com/openai/gpt-2/tree/master/gpt-2-samples}
 "conditional_topk40"
 
 #' @title Conditional with default settings
 #' @description Conditionally generated texts with contexts from WebText's test set
-#' @format A data frame with 1000 rows and 4 variables:
+#' @format A tidy data frame with 18067 rows and 4 variables:
 #' \describe{
 #'   \item{\code{file}}{character - file identifier}
 #'   \item{\code{id}}{integer - sample and completion number as referenced in the openai gpt2 sample file}
-#'   \item{\code{text}}{character - the text, either a sample context or a completion}
 #'   \item{\code{type}}{character - indicator of whether the text is a sample context or a completion}
+#'   \item{\code{text}}{character - the text, either a sample context or a completion}
 #'}
 #' @source \url{https://github.com/openai/gpt-2/tree/master/gpt-2-samples}
 "conditional"
 
 #' @title Unconditional samples with temperature 0.7
 #' @description Unconditionally generated texts from Open AI GPT-2
-#' @format A data frame with 500 rows and 3 variables:
+#' @format A tidy data frame with 28841 rows and 3 variables:
 #' \describe{
 #'   \item{\code{file}}{character file identifier}
 #'   \item{\code{id}}{integer sample id number as referenced in the openai gpt2 sample file}
@@ -57,7 +57,7 @@ NULL
 
 #' @title Unconditional with truncation 1 with top_40 k
 #' @description Unconditionally generated texts from Open AI GPT-2
-#' @format A data frame with 500 rows and 3 variables:
+#' @format A data frame with 21188 rows and 3 variables:
 #' \describe{
 #'   \item{\code{file}}{character file identifier}
 #'   \item{\code{id}}{integer sample id number as referenced in the openai gpt2 sample file}
@@ -68,7 +68,7 @@ NULL
 
 #' @title Unconditional with default settings
 #' @description Unconditionally generated texts from Open AI GPT-2
-#' @format A data frame with 500 rows and 3 variables:
+#' @format A data frame with 19468 rows and 3 variables:
 #' \describe{
 #'   \item{\code{file}}{character file identifier}
 #'   \item{\code{id}}{integer sample id number as referenced in the openai gpt2 sample file}

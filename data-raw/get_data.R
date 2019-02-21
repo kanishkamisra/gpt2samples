@@ -1,5 +1,13 @@
 library(tidyverse)
 
+clean_text <- function(text) {
+  cleaned <- str_split(str_trim(text), "\\n") %>% flatten_chr()
+  if (cleaned[1] == "")
+    cleaned = cleaned[-1]
+
+  return(cleaned)
+}
+
 read_openai_conditional <- function(path) {
   # name <- str_extract(link, "(?<=samples\\/).*(?=\\.txt)")
   name <- str_extract(path, "(?<=data-raw\\/).*(?=\\.txt)")
@@ -16,6 +24,10 @@ read_openai_conditional <- function(path) {
     mutate(
       id = row_number(),
       type = list(c("sample", "completion"))
+    ) %>%
+    unnest() %>%
+    mutate(
+      text = map(text, clean_text),
     ) %>%
     unnest()
 
@@ -36,7 +48,11 @@ read_openai_unconditional <- function(path) {
     mutate(
       id = row_number()
     ) %>%
-    select(file, id, text)
+    select(file, id, text) %>%
+    mutate(
+      text = map(text, clean_text),
+    ) %>%
+    unnest()
 
   return(unconditional_tbl)
 }
